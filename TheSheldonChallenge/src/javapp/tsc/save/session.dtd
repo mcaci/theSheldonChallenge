@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!ELEMENT session (player+, max_score, language, rule)>
+	
+	<!ELEMENT player EMPTY>
+	<!ATTLIST player
+		name CDATA #REQUIRED>
+		
+	<!ELEMENT max_score EMPTY>
+	<!ATTLIST max_score
+		value CDATA #REQUIRED>
+		
+	<!ELEMENT language EMPTY>
+	<!ATTLIST language
+		value CDATA #REQUIRED>
+	
+	<!ELEMENT rule EMPTY>
+	<!ATTLIST rule
+		value CDATA #REQUIRED>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><session>
+	<player name="Player"/>
+	<player name="AI"/>
+	<max_score value="3"/>
+	<language value="ITALIAN"/>
+	<rule value="CLASSIC"/>
+</session>
