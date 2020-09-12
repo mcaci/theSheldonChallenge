@@ -5,16 +5,16 @@ import java.awt.FlowLayout;
 import java.awt.Point;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.ImagePanel;
+import javapp.tsc.GUI.components.ScrollableTextArea;
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
+import javapp.tsc.GUI.components.fullSizeButton.RematchButton;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.listeners.newgame.RematchListener;
 import javapp.tsc.GUI.panels.base.BasePanel;
 import javapp.tsc.GUI.panels.base.FillerPanel;
-import javapp.tsc.GUI.panels.components.ImagePanel;
-import javapp.tsc.GUI.panels.components.ScrollableTextArea;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.RematchButton;
-import javapp.tsc.lang.vocab.BackButtonLabel;
+import core.tsc.lang.vocab.BackButtonLabel;
 
 public final class EndGamePanel extends BasePanel {
 

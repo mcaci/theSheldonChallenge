@@ -3,9 +3,9 @@ package javapp.tsc.GUI.panels;
 import java.awt.FlowLayout;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.ruleHelp.RuleHelpPanel;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.panels.base.TitledQuittablePanel;
-import javapp.tsc.GUI.panels.components.ruleHelp.RuleHelpPanel;
 
 public final class RuleInfoPanel extends TitledQuittablePanel {
 

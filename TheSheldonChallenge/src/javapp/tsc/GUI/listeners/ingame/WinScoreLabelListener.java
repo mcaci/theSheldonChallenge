@@ -3,7 +3,7 @@ package javapp.tsc.GUI.listeners.ingame;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import javapp.tsc.GUI.panels.components.playerInfo.PlayerPanel;
+import javapp.tsc.GUI.components.playerInfo.PlayerPanel;
 import core.tsc.AppCore;
 
 /**

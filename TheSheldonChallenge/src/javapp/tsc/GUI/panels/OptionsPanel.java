@@ -2,7 +2,10 @@ package javapp.tsc.GUI.panels;
 
 import java.awt.FlowLayout;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
+import javapp.tsc.GUI.components.halfSizebutton.SaveButton;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.listeners.options.LanguageChoiceActionListener;
@@ -10,12 +13,6 @@ import javapp.tsc.GUI.listeners.options.RuleChoiceActionListener;
 import javapp.tsc.GUI.listeners.options.SaveOptionsActionListener;
 import javapp.tsc.GUI.panels.base.FillerPanel;
 import javapp.tsc.GUI.panels.base.TitledPanel;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.GUI.panels.components.buttons.halfSized.SaveButton;
-import javapp.tsc.core.GUICore;
-import javapp.tsc.lang.translator.XMLFileTranslator;
-import javapp.tsc.lang.vocab.BackButtonLabel;
-import javapp.tsc.lang.vocab.OptionMenuLabel;
 
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
@@ -25,6 +22,9 @@ import javax.swing.JTextField;
 
 import core.tsc.AppCore;
 import core.tsc.lang.Language;
+import core.tsc.lang.translator.XMLFileTranslator;
+import core.tsc.lang.vocab.BackButtonLabel;
+import core.tsc.lang.vocab.OptionMenuLabel;
 import core.tsc.rule.Rule;
 
 public final class OptionsPanel extends TitledPanel {

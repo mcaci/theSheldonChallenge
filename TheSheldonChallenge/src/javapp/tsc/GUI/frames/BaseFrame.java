@@ -2,8 +2,8 @@ package javapp.tsc.GUI.frames;
 
 import java.awt.Dimension;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.panels.base.BasePanel;
-import javapp.tsc.core.GUICore;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;

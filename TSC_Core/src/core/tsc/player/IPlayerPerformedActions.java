@@ -3,9 +3,10 @@
  */
 package core.tsc.player;
 
+import core.tsc.mechanics.gameSession.IGameSession;
 import core.tsc.player.exception.UnknownRuleException;
 import core.tsc.player.exception.UnsuccessfulUpdateException;
-import core.tsc.player.util.PlayerState;
+import core.tsc.player.util.InGameStatus;
 import core.tsc.rule.Rule;
 import core.tsc.rule.ruleSet.IRuleSet;
 
@@ -28,7 +29,9 @@ interface IPlayerPerformedActions {
 	 * 
 	 * @param roundWinner
 	 */
-	public abstract void updateInfo(UpdateContext context) throws UnsuccessfulUpdateException;
+	public abstract void updateInfo(IGameSession info) throws UnsuccessfulUpdateException;
+	public abstract void updateScore() throws UnsuccessfulUpdateException;
+	public abstract void exitFromGame() throws UnsuccessfulUpdateException; 
 	
-	public abstract boolean checkIfPlayerStateIs(PlayerState stateToCheck);
+	public abstract boolean checkIfPlayerStateIs(InGameStatus stateToCheck);
 }

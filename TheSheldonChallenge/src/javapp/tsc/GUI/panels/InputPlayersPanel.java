@@ -3,18 +3,19 @@ package javapp.tsc.GUI.panels;
 import java.awt.FlowLayout;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
+import javapp.tsc.GUI.components.halfSizebutton.GoButton;
+import javapp.tsc.GUI.components.playerInfo.PlayerOneInputPanel;
+import javapp.tsc.GUI.components.playerInfo.PlayerTwoInputPanel;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.listeners.newgame.GoButtonActionListener;
 import javapp.tsc.GUI.panels.base.FillerPanel;
 import javapp.tsc.GUI.panels.base.TitledPanel;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.GUI.panels.components.buttons.halfSized.GoButton;
-import javapp.tsc.GUI.panels.components.playerInfo.PlayerOneInputPanel;
-import javapp.tsc.GUI.panels.components.playerInfo.PlayerTwoInputPanel;
-import javapp.tsc.lang.vocab.BackButtonLabel;
 
 import javax.swing.JTextField;
+
+import core.tsc.lang.vocab.BackButtonLabel;
 
 public final class InputPlayersPanel extends TitledPanel {
 

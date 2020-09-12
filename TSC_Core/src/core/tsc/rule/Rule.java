@@ -40,7 +40,6 @@ public enum Rule {
 
 	};
 	
-	
 	public abstract IRuleSet randomValue();
 	public abstract IRuleSet[] getRuleSet();
 	

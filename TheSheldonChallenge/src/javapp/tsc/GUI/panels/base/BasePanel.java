@@ -3,9 +3,9 @@ package javapp.tsc.GUI.panels.base;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.PanelState;
 import javapp.tsc.GUI.frames.TSCWindow;
-import javapp.tsc.core.GUICore;
 
 import javax.swing.JPanel;
 

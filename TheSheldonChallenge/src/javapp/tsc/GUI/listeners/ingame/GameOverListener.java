@@ -9,16 +9,19 @@ import javapp.tsc.GUI.PanelState;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.panels.EndGamePanel;
 import javapp.tsc.GUI.panels.InGamePanel;
-import javapp.tsc.lang.translator.XMLFileTranslator;
-import javapp.tsc.lang.vocab.OtherMessage;
+import javapp.tsc.ipc.com.SwingLabelHook;
 import core.tsc.AppCore;
 import core.tsc.lang.Language;
+import core.tsc.lang.translator.XMLFileTranslator;
+import core.tsc.lang.vocab.OtherMessage;
 
 /**
  * @author nikiforos
  * 
  */
 public final class GameOverListener extends PanelStateTransitionListener {
+
+	private SwingLabelHook winUpdater;
 
 	/**
 	 * @param p
@@ -62,6 +65,14 @@ public final class GameOverListener extends PanelStateTransitionListener {
 								+ " "
 								+ new XMLFileTranslator().translate(
 										OtherMessage.END_GAME, currentLang));
+	}
+
+	public final SwingLabelHook getWinUpdater() {
+		return winUpdater;
+	}
+
+	public final void setWinUpdater(SwingLabelHook winUpdater) {
+		this.winUpdater = winUpdater;
 	}
 
 }

@@ -3,17 +3,17 @@ package javapp.tsc.GUI.panels;
 import java.awt.FlowLayout;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.fullSizeButton.OnePlayerButton;
+import javapp.tsc.GUI.components.fullSizeButton.TwoPlayersButton;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
-import javapp.tsc.GUI.listeners.newgame.PlayerChoiceActionListener;
+import javapp.tsc.GUI.listeners.newgame.GameTypeActionListener;
 import javapp.tsc.GUI.panels.base.FillerPanel;
 import javapp.tsc.GUI.panels.base.TitledQuittablePanel;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.OnePlayerButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.TwoPlayersButton;
-import javapp.tsc.lang.translator.XMLFileTranslator;
-import javapp.tsc.lang.vocab.BackButtonLabel;
 import core.tsc.AppCore;
 import core.tsc.lang.Language;
+import core.tsc.lang.translator.XMLFileTranslator;
+import core.tsc.lang.vocab.BackButtonLabel;
 
 public final class NewGamePanel extends TitledQuittablePanel {
 
@@ -45,14 +45,14 @@ public final class NewGamePanel extends TitledQuittablePanel {
 				{
 					onePl = new OnePlayerButton(this);
 					this.getMiddlePanel().add(onePl);
-					onePl.addActionListener(new PlayerChoiceActionListener(
+					onePl.addActionListener(new GameTypeActionListener(
 							this, 1));
 
 				}
 				{
 					twoPl = new TwoPlayersButton(this);
 					this.getMiddlePanel().add(twoPl);
-					twoPl.addActionListener(new PlayerChoiceActionListener(
+					twoPl.addActionListener(new GameTypeActionListener(
 							this, 2));
 					// TODO: remove it
 					twoPl.setVisible(false);

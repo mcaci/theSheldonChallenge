@@ -3,13 +3,13 @@ package javapp.tsc.GUI.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.PanelState;
 import javapp.tsc.GUI.panels.base.BasePanel;
-import javapp.tsc.core.GUICore;
-import javapp.tsc.util.optionManager.file.xml.DOMOptionManager;
-import javapp.tsc.util.optionManager.file.xml.XMLOptionManager;
 import core.tsc.AppCore;
-import core.tsc.optionManager.exception.WriteNotSupportedException;
+import core.tsc.persistency.exception.WriteNotSupportedException;
+import core.tsc.persistency.file.xml.DOMOptionManager;
+import core.tsc.persistency.file.xml.XMLOptionManager;
 
 public class PanelStateTransitionListener implements ActionListener {
 

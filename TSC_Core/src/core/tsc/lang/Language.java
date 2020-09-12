@@ -6,7 +6,6 @@ package core.tsc.lang;
 import java.io.File;
 import java.util.Locale;
 
-
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
@@ -17,7 +16,8 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import core.tsc.AppCore;
+import core.tsc.ProjectID;
+import core.tsc.util.PathManager;
 
 /**
  * @author nikiforos
@@ -42,6 +42,29 @@ public enum Language {
 		// process the result
 		return new Locale(node.getNodeValue());
 	}
+	
+	public final Document loadVocabularyFromAndroid() {
+		try {
+			return DocumentBuilderFactory.newInstance().newDocumentBuilder()
+					.parse(this.loadVocabularyAndroidFile());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	private final File loadVocabularyAndroidFile() {
+		String filePath = this.getVocabularyAndroidPath();
+		return new File(filePath);
+	}
+	
+	private final String getVocabularyAndroidPath() {
+		String language_name = this.name().toLowerCase();
+		String file_extension = ".xml";
+		return PathManager.getProjectPath(ProjectID.ANDROID) + 
+			PathManager.getFullDir(new String[]{"lang"}) +
+			language_name + file_extension;
+	}
 
 	public final Document loadVocabularyDocument() {
 		try {
@@ -62,17 +85,17 @@ public enum Language {
 	@Deprecated
 	private final static String getVocabularyPath(String language_name) {
 		String file_extension = ".xml";
-		return AppCore.getCurrentPath() + File.separator + "lang"
-				+ File.separator + "vocab" + File.separator + "trad"
-				+ File.separator + language_name + file_extension;
+		return PathManager.getProjectPath(ProjectID.CORE) + 
+				PathManager.getFullDir(new String[]{"lang", "vocab", "trad"}) +
+				language_name + file_extension;
 	}
 
 	private final String getVocabularyPath() {
 		String language_name = this.name().toLowerCase();
 		String file_extension = ".xml";
-		return AppCore.getCurrentPath() + File.separator + "lang"
-				+ File.separator + "vocab" + File.separator + "trad"
-				+ File.separator + language_name + file_extension;
+		return PathManager.getProjectPath(ProjectID.CORE) + 
+			PathManager.getFullDir(new String[]{"lang", "vocab", "trad"}) +
+			language_name + file_extension;
 	}
 
 	public final static String[] getStringVector() {

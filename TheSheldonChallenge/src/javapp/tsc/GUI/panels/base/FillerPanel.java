@@ -1,6 +1,6 @@
 package javapp.tsc.GUI.panels.base;
 
-import javapp.tsc.core.GUICore;
+import javapp.tsc.GUI.GUICore;
 
 import javax.swing.Box.Filler;
 

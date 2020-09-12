@@ -5,17 +5,17 @@ import java.awt.FlowLayout;
 import java.awt.Point;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.ImagePanel;
+import javapp.tsc.GUI.components.ScrollableTextArea;
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.panels.base.TitledPanel;
-import javapp.tsc.GUI.panels.components.ImagePanel;
-import javapp.tsc.GUI.panels.components.ScrollableTextArea;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.lang.translator.XMLFileTranslator;
-import javapp.tsc.lang.vocab.BackButtonLabel;
-import javapp.tsc.lang.vocab.OtherMessage;
 import core.tsc.AppCore;
 import core.tsc.lang.Language;
+import core.tsc.lang.translator.XMLFileTranslator;
+import core.tsc.lang.vocab.BackButtonLabel;
+import core.tsc.lang.vocab.OtherMessage;
 
 public final class CreditsPanel extends TitledPanel {
 

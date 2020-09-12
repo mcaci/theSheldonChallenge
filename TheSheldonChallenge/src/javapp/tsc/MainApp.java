@@ -3,16 +3,15 @@
  */
 package javapp.tsc;
 
-import javapp.tsc.core.GUICore;
-import javapp.tsc.gameSession.impl.IRegularGS;
-import javapp.tsc.gameSession.impl.regular.RoundBasedGS;
-import javapp.tsc.player.impl.AliveForChoosingPlayer;
-import javapp.tsc.player.impl.AI.RandomPlayer;
+import javapp.tsc.GUI.GUICore;
+import javapp.tsc.mechanics.gameSession.roundBased.RB_Console_GS;
 import javapp.tsc.player.impl.human.ConsolePlayer;
-import javapp.tsc.util.optionManager.file.xml.SAXOptionManager;
 import core.tsc.AppCore;
+import core.tsc.mechanics.gameSession.IGameSession;
+import core.tsc.persistency.file.xml.SAXOptionManager;
 import core.tsc.player.exception.NoPlayerNameException;
 import core.tsc.player.exception.UnknownRuleException;
+import core.tsc.player.impl.afc.RandomPlayer;
 import core.tsc.rule.Rule;
 
 /**
@@ -25,9 +24,9 @@ final class MainApp {
 	 * @param args
 	 */
 	public final static void main(String[] args) {
-
+		
 		startGame();
-		// startGameSession();
+//		startConsoleGame();
 	}
 
 	private final static void startGame() {
@@ -36,12 +35,13 @@ final class MainApp {
 		GUICore.startGUI();
 	}
 
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "deprecation", "unused" })
 	private final static void startConsoleGame() {
 
-		AliveForChoosingPlayer p1 = null;
-		AliveForChoosingPlayer p2 = null;
-		Rule r = AppCore.getInstance().getSessionRule();
+		AppCore.getInstance().initializeGameData();
+		ConsolePlayer p1 = null;
+		RandomPlayer p2 = null;
+		Rule r = Rule.CLASSIC;
 
 		try {
 			p1 = new ConsolePlayer("Player", r);
@@ -52,8 +52,8 @@ final class MainApp {
 			e.printStackTrace();
 		}
 
-		IRegularGS gs = null;
-		gs = new RoundBasedGS(p1, p2);
+		IGameSession gs = null;
+		gs = new RB_Console_GS(p1, p2);
 
 		new Thread(gs, "GAME SESSION").start();
 

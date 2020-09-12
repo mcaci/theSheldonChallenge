@@ -3,12 +3,9 @@
  */
 package core.tsc;
 
-import java.io.File;
-import java.io.IOException;
-
 import core.tsc.lang.Language;
-import core.tsc.optionManager.IOptionManager;
-import core.tsc.optionManager.exception.ReadNotSupportedException;
+import core.tsc.persistency.IOptionManager;
+import core.tsc.persistency.exception.ReadNotSupportedException;
 import core.tsc.rule.Rule;
 
 /**
@@ -21,10 +18,11 @@ public final class AppCore {
 	private AppCoreData data;
 	public static final String DEFAULT_NAME_P1 = "PLAYER 1";
 	public static final String DEFAULT_NAME_P2 = "PLAYER 2";
+	
 	/**
 	 * private constructor following the Singleton pattern
 	 */
-	private AppCore() {	}
+	private AppCore() {}
 
 	/**
 	 * class holder for the Singleton pattern
@@ -39,14 +37,13 @@ public final class AppCore {
 	
 	/* ****** APPCORE METODS ****** */
 	
-	public final static String getCurrentPath(){
-		try {
-			return new File(".").getCanonicalPath() + File.separator + "src" +
-			File.separator + "javapp" + File.separator + "tsc";
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
+	
+
+	@Deprecated
+	public final void initializeGameData(){
+		// dummy initializer
+		this.data = new AppCoreData("Pl", "AI", Language.ENGLISH, 3, Rule.CLASSIC);
+		this.data.enforceConsistency();
 	}
 	
 	public final void initializeGameData(IOptionManager optLoader){

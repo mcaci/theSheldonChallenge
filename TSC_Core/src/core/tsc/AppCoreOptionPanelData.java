@@ -6,8 +6,8 @@ package core.tsc;
  * @author nikiforos
  *
  */
-import core.tsc.gameSession.IGameSession;
 import core.tsc.lang.Language;
+import core.tsc.mechanics.gameSession.IGameSession;
 import core.tsc.rule.Rule;
 
 final class AppCoreOptionPanelData {

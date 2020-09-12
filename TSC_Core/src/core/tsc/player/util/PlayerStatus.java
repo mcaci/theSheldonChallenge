@@ -8,7 +8,8 @@ package core.tsc.player.util;
  * 
  */
 public enum PlayerStatus {
-	NOT_A_WINNER, ROUND_WINNER {
+	NOT_A_WINNER, 
+	ROUND_WINNER {
 		@Override
 		public final boolean isRoundWinner() {
 			return true;

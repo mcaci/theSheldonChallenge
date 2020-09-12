@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Nov 03 14:33:13 CET 2011
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=TheSheldonChallenge1_11.jar
+manifest.mergeall=true
+manifest.mainclass=tsc.app.MainApp
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

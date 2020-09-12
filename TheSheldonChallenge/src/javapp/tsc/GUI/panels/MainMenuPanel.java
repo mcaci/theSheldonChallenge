@@ -3,16 +3,16 @@ package javapp.tsc.GUI.panels;
 import java.awt.FlowLayout;
 
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
+import javapp.tsc.GUI.components.fullSizeButton.CreditsButton;
+import javapp.tsc.GUI.components.fullSizeButton.NewGameButton;
+import javapp.tsc.GUI.components.fullSizeButton.OptionsButton;
+import javapp.tsc.GUI.components.fullSizeButton.RulesButton;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.panels.base.FillerPanel;
 import javapp.tsc.GUI.panels.base.TitledPanel;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.CreditsButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.NewGameButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.OptionsButton;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.RulesButton;
-import javapp.tsc.lang.vocab.BackButtonLabel;
+import core.tsc.lang.vocab.BackButtonLabel;
 
 public final class MainMenuPanel extends TitledPanel {
 
@@ -70,7 +70,6 @@ public final class MainMenuPanel extends TitledPanel {
 						this, null));
 			}
 		} catch (Exception e) {
-			// add your error handling code here
 			e.printStackTrace();
 		}
 	}

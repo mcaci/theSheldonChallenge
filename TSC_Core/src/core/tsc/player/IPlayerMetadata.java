@@ -1,6 +1,7 @@
 package core.tsc.player;
 
-import core.tsc.player.util.PlayerState;
+import core.tsc.ipc.ISynchro;
+import core.tsc.player.util.InGameStatus;
 import core.tsc.player.util.PlayerStatus;
 import core.tsc.rule.Rule;
 import core.tsc.rule.ruleSet.IRuleSet;
@@ -26,10 +27,16 @@ interface IPlayerMetadata {
 	/*
 	 * PlayerStates to represent the playing state 
 	 */
-	public abstract PlayerState getPlayerState();
+	public abstract void setPlayerState(InGameStatus playerState);
+	public abstract InGameStatus getPlayerState();
 	/*
 	 * PlayerStatuses to represent the winning state 
 	 */
+	public abstract void setPlayerStatus(PlayerStatus playerStatus);
 	public abstract PlayerStatus getPlayerStatus();
+	/*
+	 * Notifier to enable communication with the GameSession phase
+	 */
+	public abstract void setNotifier(ISynchro notifier);
 
 }

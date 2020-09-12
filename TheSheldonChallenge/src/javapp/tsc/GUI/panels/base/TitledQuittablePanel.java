@@ -2,9 +2,9 @@ package javapp.tsc.GUI.panels.base;
 
 import java.awt.BorderLayout;
 
+import javapp.tsc.GUI.components.fullSizeButton.BackButton;
 import javapp.tsc.GUI.frames.TSCWindow;
-import javapp.tsc.GUI.panels.components.buttons.fullSized.BackButton;
-import javapp.tsc.lang.vocab.BackButtonLabel;
+import core.tsc.lang.vocab.BackButtonLabel;
 
 public abstract class TitledQuittablePanel extends TitledPanel {
 	/**

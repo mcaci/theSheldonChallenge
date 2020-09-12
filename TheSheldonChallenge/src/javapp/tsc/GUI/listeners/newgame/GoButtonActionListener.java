@@ -5,19 +5,18 @@ package javapp.tsc.GUI.listeners.newgame;
 
 import java.awt.event.ActionEvent;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.PanelState;
 import javapp.tsc.GUI.listeners.PanelStateTransitionListener;
 import javapp.tsc.GUI.panels.InGamePanel;
 import javapp.tsc.GUI.panels.InputPlayersPanel;
-import javapp.tsc.core.GUICore;
-import javapp.tsc.gameSession.impl.regular.RoundBasedGS;
-import javapp.tsc.player.impl.AliveForChoosingPlayer;
-import javapp.tsc.player.impl.AI.RandomPlayer;
-import javapp.tsc.player.impl.human.GUIPlayer;
+import javapp.tsc.mechanics.gameSession.roundBased.RB_GUI_GS;
+import javapp.tsc.player.impl.human.SwingPlayer;
 import core.tsc.AppCore;
-import core.tsc.gameSession.IGameSession;
+import core.tsc.mechanics.gameSession.IGameSession;
 import core.tsc.player.exception.NoPlayerNameException;
 import core.tsc.player.exception.UnknownRuleException;
+import core.tsc.player.impl.afc.RandomPlayer;
 import core.tsc.rule.Rule;
 
 /**
@@ -51,12 +50,12 @@ public final class GoButtonActionListener extends PanelStateTransitionListener {
 
 		System.out.println(s1 + " vs " + s2);
 
-		AliveForChoosingPlayer p1 = null;
-		AliveForChoosingPlayer p2 = null;
+		SwingPlayer p1 = null;
+		RandomPlayer p2 = null;
 		Rule r = AppCore.getInstance().getSessionRule();
 
 		try {
-			p1 = new GUIPlayer(AppCore.getInstance().getNameP1(), r);
+			p1 = new SwingPlayer(AppCore.getInstance().getNameP1(), r);
 			// p1 = new RandomPlayer(AppCore.getInstance().getNameP1(), r);
 			p2 = new RandomPlayer(AppCore.getInstance().getNameP2(), r);
 		} catch (NoPlayerNameException e) {
@@ -75,7 +74,7 @@ public final class GoButtonActionListener extends PanelStateTransitionListener {
 
 		// start game
 		IGameSession gs = null;
-		gs = new RoundBasedGS(p1, p2, AppCore.getInstance().getScoreToWin());
+		gs = new RB_GUI_GS(p1, p2, AppCore.getInstance().getScoreToWin());
 
 		new Thread(gs, "GAME SESSION").start();
 	}

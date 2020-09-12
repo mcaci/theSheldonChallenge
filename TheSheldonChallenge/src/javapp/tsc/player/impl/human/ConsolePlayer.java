@@ -5,9 +5,9 @@ package javapp.tsc.player.impl.human;
 
 import java.util.Scanner;
 
-import javapp.tsc.player.impl.AliveForChoosingPlayer;
 import core.tsc.player.exception.NoPlayerNameException;
 import core.tsc.player.exception.UnknownRuleException;
+import core.tsc.player.impl.afc.AliveForChoosingPlayer;
 import core.tsc.rule.Rule;
 import core.tsc.rule.ruleSet.IRuleSet;
 import core.tsc.rule.ruleSet.impl.ClassicRuleSet;

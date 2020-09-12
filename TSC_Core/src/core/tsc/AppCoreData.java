@@ -33,7 +33,8 @@ public class AppCoreData {
 		this.data = new AppCoreOptionPanelData(lang, maxScore, rule);
 	}
 	
-	// this is more important because it checks every field one at a time
+	// (?) this is more important because it checks every field one at a time
+	@Deprecated
 	public final void setAll(String p1, String p2, Language lang, int maxScore, Rule rule){
 		this.setPlayerNames(p1, p2);
 		this.setOptionData(lang, maxScore, rule);
@@ -47,6 +48,10 @@ public class AppCoreData {
 
 	public final void setOptionData(Language lang, int maxScore, Rule rule) {
 		this.data.setAll(lang, maxScore, rule);		
+	}
+	
+	public final void setOptionData(String lang, String maxScore, String rule) {
+		this.data = new AppCoreOptionPanelData(lang, maxScore, rule);		
 	}
 
 	/**

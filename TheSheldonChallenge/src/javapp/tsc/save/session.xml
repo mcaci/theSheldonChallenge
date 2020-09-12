@@ -2,6 +2,6 @@
 	<player name="Player"/>
 	<player name="AI"/>
 	<max_score value="3"/>
-	<language value="ITALIAN"/>
+	<language value="ENGLISH"/>
 	<rule value="CLASSIC"/>
 </session>

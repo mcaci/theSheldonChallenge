@@ -5,26 +5,26 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Point;
 
+import javapp.tsc.GUI.GUICore;
 import javapp.tsc.GUI.PanelState;
+import javapp.tsc.GUI.components.choicePanel.ClassicChooserPanel;
+import javapp.tsc.GUI.components.choicePanel.MoveChooser;
+import javapp.tsc.GUI.components.choicePanel.SheldonChooserPanel;
+import javapp.tsc.GUI.components.halfSizebutton.RandomButton;
+import javapp.tsc.GUI.components.halfSizebutton.SurrenderButton;
+import javapp.tsc.GUI.components.playerInfo.PlayerOneInfoPanel;
+import javapp.tsc.GUI.components.playerInfo.PlayerTwoInfoPanel;
 import javapp.tsc.GUI.frames.TSCWindow;
 import javapp.tsc.GUI.listeners.ingame.GameOverListener;
 import javapp.tsc.GUI.listeners.ingame.PlayerMoveListener;
 import javapp.tsc.GUI.panels.base.BasePanel;
-import javapp.tsc.GUI.panels.components.buttons.halfSized.RandomButton;
-import javapp.tsc.GUI.panels.components.buttons.halfSized.SurrenderButton;
-import javapp.tsc.GUI.panels.components.choicePanel.ClassicChooserPanel;
-import javapp.tsc.GUI.panels.components.choicePanel.MoveChooser;
-import javapp.tsc.GUI.panels.components.choicePanel.SheldonChooserPanel;
-import javapp.tsc.GUI.panels.components.playerInfo.PlayerOneInfoPanel;
-import javapp.tsc.GUI.panels.components.playerInfo.PlayerTwoInfoPanel;
-import javapp.tsc.core.GUICore;
-import javapp.tsc.core.IntercomCore;
-import javapp.tsc.mediation.MoveLabelUpdater;
-import javapp.tsc.mediation.ScoreLabelUpdater;
+import javapp.tsc.ipc.com.SwingLabelHook;
+import javapp.tsc.ipc.sync.SwingButtonHook;
 
 import javax.swing.JLabel;
 
 import core.tsc.AppCore;
+import core.tsc.ipc.IntercomCore;
 import core.tsc.rule.Rule;
 import core.tsc.rule.ruleSet.IRuleSet;
 
@@ -42,23 +42,20 @@ public final class InGamePanel extends BasePanel {
 	private static final int MOVES_PANEL_WIDTH = 180;
 	private static final int MOVES_PANEL_HEIGHT = 115;
 
-	// private boolean waitingForChoice = true;
 	private IRuleSet moveToReturn;
-
-	private ScoreLabelUpdater guiGSCommunicator;
-	private MoveLabelUpdater guiGRCommunicator;
+	
+//	private SwingLabelHook labelUpdater;
+	private SwingButtonHook playerSynchronizer; 
 
 	public InGamePanel(TSCWindow frame) {
 		super(frame);
-
-		this.guiGSCommunicator = IntercomCore.getInstance().getGsCom();
-		this.guiGSCommunicator.registerInGamePanel(this);
-		this.guiGSCommunicator.registerGameOverListener(new GameOverListener(
-				this, PanelState.END_GAME));
-
-		this.guiGRCommunicator = IntercomCore.getInstance().getGrCom();
-		this.guiGRCommunicator.registerInGamePanel(this);
-
+		registerToHook((SwingLabelHook) (IntercomCore.getInstance().getHook()));
+	}
+	
+	private final void registerToHook(SwingLabelHook hook){
+		hook.setIgp(this);
+		hook.setGol(new GameOverListener(this, PanelState.END_GAME));
+//		this.setLabelUpdater(hook);
 	}
 
 	protected final void initGUI(TSCWindow frame) {
@@ -156,6 +153,22 @@ public final class InGamePanel extends BasePanel {
 
 	public final IRuleSet getMoveToReturn() {
 		return moveToReturn;
+	}
+
+//	public void setLabelUpdater(SwingLabelHook hook) {
+//		this.labelUpdater = hook;
+//	}
+//
+//	public SwingLabelHook getLabelUpdater() {
+//		return labelUpdater;
+//	}
+
+	public void setPlayerSynchronizer(SwingButtonHook playerSynchronizer) {
+		this.playerSynchronizer = playerSynchronizer;
+	}
+
+	public SwingButtonHook getPlayerSynchronizer() {
+		return playerSynchronizer;
 	}
 
 }
