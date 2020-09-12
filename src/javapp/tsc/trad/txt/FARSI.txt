@@ -1,0 +1,52 @@
+"Rock" -> "سنگ"
+"Paper" -> "کاغذ"
+"Scissors" -> "قیچی"
+"Lizard" -> "مارمولک"
+"Spock" -> "اسپاک"(no need of translation here) 
+
+"(He) wins!!!" -> ".برنده شد"
+Put the winner name first.
+
+"(He) wins because you surrendered.." -> "برنده شد چون شما تسلیم شدید"
+Put the winner name first.
+
+"Designed and implemented by Nikiforos [this is my nickname]. Please send all comments, suggestions and feedbacks to" -> 
+"طراحی و پیاده شده توسط نیکیفروس، هرگونه نظرات و پیشنهادات خود را با ما در میان بگذارید"
+Put the address after this line. your nickname is in farsi.
+
+"One Player" -> "یک نفره"
+"Two Players" -> "دو نفره"
+"New Game" -> "بازی جدید"
+"Options" -> "انتخابها"
+"Rule(s)" -> "قوانین"
+
+"Credits" -> "Credits" (I'm usually not translating it, but is there any word you would use for it?)
+If this is the people who made the game and helped, it is : 
+سازندگان
+
+"START!" -> "شروع" (I'm usually not translating it either, but again is there any word you would use for it?)
+"Save (options)" -> "ذخیره"
+"Random (move)" -> "حرکت تصادفی" (same as before)
+"Surrender" -> "تسلیم"
+"Rematch" -> "دوباره"
+"Back (for a button)" -> "بازگشت"
+"Cancel" -> "انصراف"
+"Main Menu" -> "منو اصلی"
+"Quit" -> "خروج"
+"Move" -> "حرکت"
+"Language" -> "زبان"
+"Score to win" -> "امتیاز لازم برای بردن"
+"Score" -> "امتیاز"
+"Enter name" -> "نام خود را وارد کنید"
+
+"wins over" -> "را می برد." (like in the sentence "rock wins against scissors")
+Put the winner name first, then the loser name, then “ را می برد" 
+As in: 
+"سنگ قیچی را می برد" 
+
+
+"loses with" -> "" (like in the sentence "rock loses against paper")
+Put the loser name first, then “از” then the winner name, then "می بازد" 
+"سنگ از کاغذ می بازد"
+
+"every move ties with itself" -> "حرکت مشابه مساوی محسوب میشود." (what i mean to here is "rock ties with rock" etc.)

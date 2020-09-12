@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><session>
+	<player name="Player" number="1"/>
+	<player name="Computer" number="2"/>
+	<max_score value="3"/>
+	<language value="ENGLISH"/>
+	<rule value="SHELDON"/>
+</session>

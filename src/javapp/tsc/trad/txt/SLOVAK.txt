@@ -1,0 +1,31 @@
+"Rock" -> ""
+"Paper" -> ""
+"Scissors" -> ""
+"Lizard" -> ""
+"Spock" -> (no need of translation here) 
+"(He) wins!!!" -> ""
+"(He) wins because you surrendered.." -> ""
+"Designed and implemented by Nikiforos. Please send all comments, suggestions and feedbacks to" -> ""
+"One Player" -> ""
+"Two Players" -> ""
+"New Game" -> ""
+"Options" -> ""
+"Rule(s)" -> ""
+"Credits" -> "Credits" (I'm not translating it, but is there any word you would use for it?)
+"START!" -> "START!" (I'm not translating it, but again is there any word you would use for it?)
+"Save (options)" -> ""
+"Random (move)" -> "" (same as before. p.s this one and surrender have to be small now because of the size of the button but I'd appreciate the correct translation anyway)
+"Surrender" -> ""
+"Rematch" -> ""
+"Back (for a button)" -> ""
+"Cancel" -> ""
+"Main Menu" -> ""
+"Quit" -> ""
+"Move" -> ""
+"Language" -> ""
+"Score to win" -> ""
+"Score" -> ""
+"Enter name" -> ""
+"wins over" -> "" (what i want to say here is for example "rock wins against scissors")
+"loses with" -> "" (what i want to say here is for example "rock loses against paper")
+"every move ties with itself" -> "" (what i want to say here is "rock ties with rock" etc.)

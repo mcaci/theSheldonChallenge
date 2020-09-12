@@ -1,0 +1,31 @@
+"Rock" -> "Pierre"
+"Paper" -> "Feuille"
+"Scissors" -> "Ciseaux"
+"Lizard" -> "Lézard"
+"Spock" -> (no need of translation here) 
+"(He) wins!!!" -> " gagne!!!"
+"(He) wins because you surrendered.." -> " gagne parce que t'es rendu.."
+"Designed and implemented by Nikiforos. Please send all comments, suggestions and feedbacks to" -> "Conçu et mis en œuvre par Nikiforos. S'il vous plaît envoyez vos commentaires et suggestions à"
+"One Player" -> "Un joueur"
+"Two Players" -> "Deux joueurs"
+"New Game" -> "Nouvelle Partie"
+"Options" -> "Options"
+"Rule(s)" -> "Règle(s)"
+"Credits" -> "Credits" (I'm not translating it, but is there any word you would use for it?)
+"START!" -> "START!" (I'm not translating it, but again is there any word you would use for it?)
+"Save (options)" -> "Enregistrer"
+"Random (move)" -> "Random" (same as before)
+"Surrender" -> "Abandonner"
+"Rematch" -> "Revanche"
+"Back (for a button)" -> "Arrière"
+"Cancel" -> "Annuler"
+"Main Menu" -> "Menu Principal"
+"Quit" -> "Quitter"
+"Move" -> "Action"
+"Language" -> "Langue"
+"Score to win" -> "Pour gagner" (I wanted to write "Points pour gagner" but it's too long for the screen now)
+"Score" -> "Points"
+"Enter name" -> "Saisissez votre nom"
+"wins over" -> "gagne contre"
+"loses with" -> "perd contre"
+"every move ties with itself" -> "deux actions égales font match nul"

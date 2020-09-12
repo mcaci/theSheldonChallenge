@@ -1,0 +1,31 @@
+"Rock" -> "Stein" 
+"Paper" -> "Papier" 
+"Scissors" -> "Schere" 
+"Lizard" -> "Echse" 
+"Spock" -> (no need of translation here) 
+"(He) wins!!!" -> "(er) gewinnt!!!"
+"(He) wins because you surrendered.." -> "(Er) gewinnt, da du aufgegeben hast.."
+"Designed and implemented by Nikiforos. Please send all comments, suggestions and feedbacks to" -> "Erdacht und entwickelt von Nikiforos. Bitte sende alle Kommentare, Anregungen oder allgemeines Feedback an"
+"One Player" -> "Ein Spieler"
+"Two Players" -> "Zwei Spieler"
+"New Game" -> "Neues Spiel"
+"Options" -> "Optionen"
+"Rule(s)" -> "Regel(n)"
+"Credits" -> "Credits" (I'm not translating it, but is there any word you would use for it? hm... I can't think of a fitting one... if I can think of sth I'll send you a text ^^ sometimes as e.g. on websites you can find credits as well. They are called "Impressum". But I'm not sure if you want to use that one)
+"START!" -> "START!" (I'm not translating it, but again is there any word you would use for it? Start does exit in German as well =) )
+"Save (options)" -> "Speichern (Optionen)"
+"Random (move)" -> "Zufall" (ok "Zufälliger Spielzug" too) (gleicher wie zuvor)
+"Surrender" -> "Aufgeben"
+"Rematch" -> "Rückspiel"
+"Back (for a button)" -> "Zurück"
+"Cancel" -> "Abbrechen"
+"Main Menu" -> "Hauptmenü"
+"Quit" -> "Schließen"
+"Move" -> "Spielzug"
+"Language" -> "Sprache"
+"Score to win" -> "Punkte um zu gewinnen"
+"Score" -> "Punkte"
+"Enter name" -> "Gebe einen Namen ein"
+"wins over" -> "gewinnt gegen" "besiegt" (hm.. not sure, what exactly you mean, but I guess it's this version - XY wins over AB -> XY besiegt AB)
+"loses with" -> "verliert gegen" "verliert mit"
+"every move ties with itself" -> "Wenn beide Spieler den gleichen Spielzug wählen wird dies zu einem Unentschieden führen" (also here I'm not completely sure -> does it mean, that whatever you'll do the game will end in a tie?)

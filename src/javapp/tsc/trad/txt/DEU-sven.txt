@@ -1,0 +1,41 @@
+"Rock" -> "Stein"
+"Paper" -> "Schere"
+"Scissors" -> "Papier"
+"Lizard" -> "Echse"
+"Spock" -> (no need of translation here) 
+"(He) wins!!!" -> "(Er) gewinnt!!!"
+"(He) wins because you surrendered.." -> "(Er) gewinnt, weil Du aufgegeben hast"
+"Designed and implemented by Nikiforos [this is my nickname]. Please send all comments, suggestions and feedbacks to" -> "Designed und implementiert von Nikiforos [das ist mein Nickname]. Bitte sende alle Kommentare, Vorschläge und Feedback an"
+"One Player" -> "Ein Spieler"
+"Two Players" -> "Zwei Spieler"
+"New Game" -> "Neues Spiel"
+"Options" -> "Optionen"
+"Rule(s)" -> "Regeln"    {we would not say Regel(n), that sounds off in German..}
+"Credits" -> "Credits" (I'm usually not translating it, but is there any word you would use for it? -> NOOO , we use Credits)
+"START!" -> "START!" (I'm usually not translating it either, but again is there any word you would use for it? Nooo, the word is START!)
+"Save (options)" -> "Speichern (Optionen)"
+"Random (move)" -> "Zufällig" (same as before)    
+"Surrender" -> "Aufgeben"
+"Rematch" -> "Revanche"
+"Back (for a button)" -> "Zurück"
+"Cancel" -> "Abbrechen"
+"Main Menu" -> "Hauptmenü"
+"Quit" -> "Beenden"
+"Move" -> "Zug / Bewegen"   {if you mean a playing move then it is word 1 if it is movement involved it is the 2nd}
+"Language" -> "Sprache"
+"Score to win" -> "Punktzahl zum Gewinnen"
+"Score" -> "Punkte"
+"Enter name" -> "Name eingeben"
+"wins over" -> "schlägt" (like in the sentence "rock wins against scissors")
+"loses with" -> "verliert gegen" (like in the sentence "rock loses against paper")
+"every move ties with itself" -> "Gleiche Symbole bilden ein Unentschieden" (what i mean to here is "rock ties with rock" etc.)
+
+Something I would like to say in advance.
+Germans use something called "Umlaute".
+These are special letters in the alphabet (ä,ö,ü). It should not cause trouble, but some machines have difficulties displaying them.
+I will write them as "Umlaute". However if you run into problems 
+(and won't be able to fix them in reasonable time) 
+the following substitutions apply
+ä = ae
+ö = oe
+ü = ue
